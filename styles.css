@@ -51,7 +51,7 @@ h1 {
 }
 
 h2 {
-    margin-top: 0;
+    margin-top: 20px;
 }
 
 .right-content h2 {
@@ -162,6 +162,7 @@ li {
     flex-grow: 0;
     /* background-color: #ebe4d3; */
     background-color: #eac997;
+    /* display: none; */
 }
 
 

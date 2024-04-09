@@ -1,7 +1,9 @@
 
 const fullName = "Martin de Valois";
+const jobTitle = "Software developer";
 const linkedIn = "linkedin.com/in/martindevalois";
-const website = "martin-website.netlify.app"
+const website = "martindev.nl"
+const websiteURL = "https://www.martindev.nl";
 const address = "Leiden";
 const dateOfBirth = "08-11-1991"
 const email = "martin_de_v@hotmail.com"
@@ -15,7 +17,7 @@ const languages = [
     { name: "Frans", proficiency: 2 },
 ];
 
-const skills = ["Java, Springboot", "HTML/CSS", "Javascript, React", "Python", "SQL", "MongoDB", "Git", "Azure DevOps"];
+const skills = ["Java, Springboot", "HTML/CSS", "Javascript, React, Node.js", "Python, Flask", "SQL", "MongoDB", "Git", "Azure DevOps"];
 // const skills = ["Java", "HTML/CSS/Javascript", "Python", "Springboot", "React", "SQL", "MongoDB", "Git", "Azure DevOps"];
 
 const certificates = ["Java OCA", "Scrum"];
@@ -50,11 +52,14 @@ const education = [
 function updateCVContent() {
     // console.log(phoneNumber)
     document.getElementById("name").textContent = fullName;
+    document.getElementById("jobTitle").textContent = jobTitle;
     document.getElementById("email").textContent = email;
     document.getElementById("linkedIn").textContent = linkedIn;
     document.getElementById("website").textContent = website;
     document.getElementById("address").textContent = address;
     document.getElementById("dateOfBirth").textContent = dateOfBirth;
+
+    document.getElementById("website").href = websiteURL;
 
     if (phone != undefined) {
         document.getElementById("phone").textContent = phone;
@@ -112,8 +117,6 @@ function updateCVContent() {
     document.getElementById("pythonGames").innerHTML = pythonGames;
     document.getElementById("fullstack").innerHTML = fullstack;
     document.getElementById("hosting").innerHTML = hosting;
-    // document.getElementById("summary").innerHTML = summary;
-    // document.getElementById("contact").innerHTML = contact;
 
     const divs = document.querySelectorAll('.side-content > div');
     for (let i = 0; i < divs.length; i++) {
