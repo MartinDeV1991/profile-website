@@ -1,11 +1,11 @@
 
 const fullName = "Martin de Valois";
-const email = "";
 const linkedIn = "linkedin.com/in/martindevalois";
 const website = "martin-website.netlify.app"
-const phone = "";
 const address = "Leiden";
 const dateOfBirth = "08-11-1991"
+const email = "martin_de_v@hotmail.com"
+const phone = typeof phoneNumber !== 'undefined' ? phoneNumber : null;
 
 const languages = [
     { name: "Nederlands", proficiency: 5 },
@@ -21,7 +21,7 @@ const skills = ["Java, Springboot", "HTML/CSS", "Javascript, React", "Python", "
 const certificates = ["Java OCA", "Scrum"];
 
 const workExperience = [
-    { title: "Software development trainee", company: "Youngcapital Next", date: "2023 - 2024", description: [] },
+    { title: "Software development trainee", company: "Youngcapital Next", date: "2023 - 2024", description: ["Ontwikkelen van technische skills voor het maken van fullstack applicaties."] },
     { title: "Sabbatical", date: "2020 - 2023", description: ["Analyseren van de beurs en handelen in aandelen en opties.", "Ontwikkeling van soft skills middels werk als skileraar en studie psychologie.", "Gereisd door Europa, Azië en Midden-Amerika."] },
     { title: "Senior data science consultant", company: "RiskQuest", date: "2017 - 2019", description: ["Leaseplanbank: Validatie van de credit risk modellen zodat deze voldoen aan de wet- en regelgeving.", "Rabobank: Implementeren en testen van modellen en de maandelijkse risicocijfers berekenen en rapporteren.", "Rabobank: Data verzamelen en verwerken voor de credit risk modellen."] },
     { title: "Risk manager", company: "De Nederlandsche Bank", date: "2014 - 2017", description: ["Ontwikkeling en validatie van risico modellen. ", "Kwartaalrapportages voor management maken om inzicht te geven in het krediet- en marktrisico van de bank."] },
@@ -34,7 +34,6 @@ const education_english = [
     { degree: "Bachelor astronomy", school: "Leiden University", date: "2009 - 2012" },
     { degree: "VWO Gymnasium (combination year 5/6 VWO) ", school: "Luzac College Rotterdam", date: "2008 - 2009" },
     { degree: "VWO Gymnasium (bilingual) ", school: "Jacob van Liesveldt", date: "2004 - 2008" },
-
 ];
 
 const education = [
@@ -49,14 +48,18 @@ const education = [
 
 
 function updateCVContent() {
+    // console.log(phoneNumber)
     document.getElementById("name").textContent = fullName;
     document.getElementById("email").textContent = email;
     document.getElementById("linkedIn").textContent = linkedIn;
     document.getElementById("website").textContent = website;
-    document.getElementById("phone").textContent = phone;
     document.getElementById("address").textContent = address;
     document.getElementById("dateOfBirth").textContent = dateOfBirth;
 
+    if (phone != undefined) {
+        document.getElementById("phone").textContent = phone;
+        document.getElementById("phoneNumberItem").style.display = 'block';
+    }
     // languages.forEach(language => {
     //     const li = document.createElement("li");
     //     li.textContent = language;
