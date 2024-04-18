@@ -20,7 +20,7 @@ const languages = [
 const skills = ["Java, Springboot", "HTML/CSS", "Javascript, React, Node.js", "Python, Flask", "SQL", "MongoDB", "Git", "Azure"];
 // const skills = ["Java", "HTML/CSS/Javascript", "Python", "Springboot", "React", "SQL", "MongoDB", "Git", "Azure DevOps"];
 
-const certificates = ["Java OCA", "Scrum"];
+const certificates = ["Java OCA", "Scrum", "CFA level 1", "FRM"];
 
 const workExperience = [
     { title: "Software development trainee", company: "Youngcapital Next", date: "2023 - 2024", description: ["Ontwikkelen van technische skills voor het maken van fullstack applicaties."] },
