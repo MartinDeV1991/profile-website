@@ -112,18 +112,7 @@ function updateCVContent() {
         document.getElementById("education").appendChild(li);
     });
 
-    document.getElementById("projects").innerHTML = projects;
-    document.getElementById("jsGames").innerHTML = jsGames;
-    document.getElementById("pythonGames").innerHTML = pythonGames;
-    document.getElementById("fullstack").innerHTML = fullstack;
-    document.getElementById("hosting").innerHTML = hosting;
-
-    const divs = document.querySelectorAll('.side-content > div');
-    for (let i = 0; i < divs.length; i++) {
-        if (i < divs.length - 1) {
-            divs[i].style.marginBottom = '20px';
-        }
-    }
+    
 }
 
 updateCVContent();
