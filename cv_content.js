@@ -23,8 +23,8 @@ const skills = ["Java, Springboot", "HTML/CSS", "Javascript, React, Node.js", "P
 const certificates = [
     { certificate: "Java OCA", institution: "Oracle" },
     { certificate: "Agile Scrum Foundations", institution: "Exin" },
-    // { certificate: "CFA level 1", institution: "CFA Institute" },
-    // { certificate: "FRM", institution: "GARP" }
+    { certificate: "CFA level 1", institution: "CFA Institute" },
+    { certificate: "FRM", institution: "GARP" }
 ];
 
 const workExperience = [
