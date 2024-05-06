@@ -20,29 +20,35 @@ const languages = [
 const skills = ["Java, Springboot", "HTML/CSS", "Javascript, React, Node.js", "Python, Flask", "SQL", "MongoDB", "Git", "Azure"];
 // const skills = ["Java", "HTML/CSS/Javascript", "Python", "Springboot", "React", "SQL", "MongoDB", "Git", "Azure DevOps"];
 
-const certificates = ["Java OCA", "Scrum", "CFA level 1", "FRM"];
+const certificates = [
+    { certificate: "Java OCA", institution: "Oracle" },
+    { certificate: "Agile Scrum Foundations", institution: "Exin" },
+    // { certificate: "CFA level 1", institution: "CFA Institute" },
+    // { certificate: "FRM", institution: "GARP" }
+];
 
 const workExperience = [
-    { title: "Software development trainee", company: "Youngcapital Next", date: "2023 - 2024", description: ["Ontwikkelen van technische skills voor het maken van fullstack applicaties."] },
-    { title: "Sabbatical", date: "2020 - 2022", description: ["Skileraar, reizen, studie psychologie, ontwikkelen development skills."] },
-    { title: "Senior data science consultant", company: "RiskQuest", date: "2017 - 2019", description: ["Leaseplanbank: Validatie van de credit risk modellen zodat deze voldoen aan wet- en regelgeving.", "Rabobank: Implementeren en testen van modellen en de maandelijkse risicocijfers berekenen en rapporteren.", "Rabobank: Data verzamelen en verwerken voor de credit risk modellen."] },
-    { title: "Risk manager", company: "De Nederlandsche Bank", date: "2014 - 2017", description: ["Ontwikkeling en validatie van risico modellen. ", "Kwartaalrapportages voor management maken om inzicht te geven in het krediet- en marktrisico van de bank."] },
+    { title: "Software Development Trainee", company: "Youngcapital Next", date: "2023 - 2024", description: ["Ontwikkelen van technische skills voor het maken van fullstack applicaties."] },
+    // { title: "Sabbatical", date: "2020 - 2022", description: ["Skileraar, reizen, studie psychologie, ontwikkelen development skills."] },
+    { title: "Skileraar", company: "Skischule Serfaus", date: "2019 - 2020", description: ["Skiles geven aan groepen van verschillende niveau's en leeftijden."] },
+    { title: "Senior Data Science Consultant", company: "RiskQuest", date: "2017 - 2019", description: [ "Rabobank: Implementeren en testen van modellen en de maandelijkse risicocijfers berekenen en rapporteren.", "Leaseplanbank: Validatie van de credit risk modellen zodat deze voldoen aan wet- en regelgeving.", "Rabobank: Data verzamelen en verwerken voor de credit risk modellen."] },
+    { title: "Risk Manager", company: "De Nederlandsche Bank", date: "2014 - 2017", description: ["Ontwikkeling en validatie van risico modellen. ", "Kwartaalrapportages voor management maken om inzicht te geven in het krediet- en marktrisico van de bank."] },
 ];
 
 const education_english = [
-    { degree: "Bachelor psychology (parttime)", school: "Open University", date: "2020 - 2024" },
-    { degree: "Master physics and science based business", school: "Leiden University", date: "2012 - 2014" },
-    { degree: "Bachelor physics", school: "Leiden University", date: "2009 - 2012" },
-    { degree: "Bachelor astronomy", school: "Leiden University", date: "2009 - 2012" },
-    { degree: "VWO Gymnasium (combination year 5/6 VWO) ", school: "Luzac College Rotterdam", date: "2008 - 2009" },
-    { degree: "VWO Gymnasium (bilingual) ", school: "Jacob van Liesveldt", date: "2004 - 2008" },
+    { degree: "Bachelor Psychology (parttime)", school: "Open University", date: "2020 - 2024" },
+    { degree: "Master Physics and Science Based Business", school: "Leiden University", date: "2012 - 2014" },
+    { degree: "Bachelor Physics", school: "Leiden University", date: "2009 - 2012" },
+    { degree: "Bachelor Astronomy", school: "Leiden University", date: "2009 - 2012" },
+    // { degree: "VWO Gymnasium (combination year 5/6 VWO) ", school: "Luzac College Rotterdam", date: "2008 - 2009" },
+    // { degree: "VWO Gymnasium (bilingual) ", school: "Jacob van Liesveldt", date: "2004 - 2008" },
 ];
 
 const education = [
-    { degree: "Bachelor psychologie (parttime)", school: "Open Universiteit", date: "2020 - 2024" },
-    { degree: "Master physics and science based business", school: "Universiteit Leiden", date: "2012 - 2014" },
-    { degree: "Bachelor natuurkunde", school: "Universiteit Leiden", date: "2009 - 2012" },
-    { degree: "Bachelor sterrenkunde", school: "Universiteit Leiden", date: "2009 - 2012" },
+    { degree: "Bachelor Psychologie (parttime)", school: "Open Universiteit", date: "2020 - 2024" },
+    { degree: "Master Physics and Science Based Business", school: "Universiteit Leiden", date: "2012 - 2014" },
+    { degree: "Bachelor Natuurkunde", school: "Universiteit Leiden", date: "2009 - 2012" },
+    { degree: "Bachelor Sterrenkunde", school: "Universiteit Leiden", date: "2009 - 2012" },
     // { degree: "VWO Gymnasium (combinatiejaar 5/6 VWO) ", school: "Luzac College Rotterdam", date: "2008 - 2009" },
     // { degree: "VWO Gymnasium (tweetalig onderwijs) ", school: "Jacob van Liesveldt", date: "2004 - 2008" },
 
@@ -50,7 +56,6 @@ const education = [
 
 
 function updateCVContent() {
-    // console.log(phoneNumber)
     document.getElementById("name").textContent = fullName;
     document.getElementById("jobTitle").textContent = jobTitle;
     document.getElementById("email").textContent = email;
@@ -91,7 +96,7 @@ function updateCVContent() {
 
     certificates.forEach(certificate => {
         const li = document.createElement("li");
-        li.textContent = certificate;
+        li.innerHTML = `<span style="font-weight: 600">${certificate.certificate}</span> | <em>${certificate.institution} </em>`;
         document.getElementById("certificates").appendChild(li);
     });
 
@@ -112,7 +117,7 @@ function updateCVContent() {
         document.getElementById("education").appendChild(li);
     });
 
-    
+
 }
 
 updateCVContent();

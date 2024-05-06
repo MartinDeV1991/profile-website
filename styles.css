@@ -13,13 +13,85 @@ body {
     justify-content: center;
 }
 
+.triangle {
+    position: relative;
+    top: -10px;
+    left: -10px;
+    border-left: 120px solid transparent;
+    border-right: 120px solid transparent;
+    border-top: 60px solid rgb(34, 39, 59);
+}
+
+.profile-image-container {
+    position: relative;
+    left: 60px;
+    top: -10px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.bullets {
+    float: right;
+    margin-right: 70px;
+}
+
+.cv-wrapper {
+    height: 297mm;
+    width: 210mm;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+
+/* printable version */
+
+/* body {
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.triangle {
+    position: relative;
+    top: -10px;
+    left: -10px;
+    border-left: 142px solid transparent;
+    border-right: 142px solid transparent;
+    border-top: 80px solid rgb(34, 39, 59);
+}
+
+.profile-image-container {
+    position: relative;
+    left: 60px;
+    top: -10px;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.bullets {
+    float: right;
+    margin-right: 80px;
+}
+
+.cv-wrapper { 
+    flex-grow: 0;
+    flex-shrink: 1;
+} */
+
+
 .top-bar {
     background: rgb(34, 39, 59);
     text-align: center;
     color: #fff;
     padding: 20px 0;
     position: relative;
-    height: 100px;
+    height: 150px;
 }
 
 .container {
@@ -34,6 +106,7 @@ body {
 }
 
 .right-content {
+    font-size: 14pt;
     width: 75%;
     background-color: #ffffff;
     padding: 20px;
@@ -72,25 +145,6 @@ li {
     margin-bottom: 10px;
 }
 
-.triangle {
-    position: relative;
-    top: -10px;
-    left: -10px;
-    border-left: 120px solid transparent;
-    border-right: 120px solid transparent;
-    border-top: 60px solid rgb(34, 39, 59);
-}
-
-.profile-image-container {
-    position: relative;
-    left: 60px;
-    top: -10px;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
 .profile-image {
     position: relative;
     top: 50%;
@@ -99,11 +153,6 @@ li {
     height: 100%;
     width: auto;
     object-fit: cover;
-}
-
-.bullets {
-    float: right;
-    margin-right: 50px;
 }
 
 .titles {
@@ -139,13 +188,6 @@ li {
     text-align: center;
 }
 
-.cv-wrapper {
-    height: 297mm;
-    width: 210mm;
-    flex-grow: 0;
-    flex-shrink: 1;
-}
-
 @media screen and (min-width: 1300px) {
     .side-content {
         margin: 0 200px;
@@ -159,6 +201,6 @@ li {
 
 @media screen and (max-width: 1300px) {
     body {
-        display:block;
+        display: block;
     }
 }
