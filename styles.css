@@ -24,10 +24,10 @@ body {
 
 .profile-image-container {
     position: relative;
-    left: 60px;
-    top: -10px;
-    width: 120px;
-    height: 120px;
+    left: 40px;
+    top: 10px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     overflow: hidden;
 }

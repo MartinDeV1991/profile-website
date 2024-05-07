@@ -22,7 +22,7 @@ const skills = ["Java, Springboot", "HTML/CSS", "Javascript, React, Node.js", "P
 
 const certificates = [
     { certificate: "Java OCA", institution: "Oracle" },
-    { certificate: "Agile Scrum Foundations", institution: "Exin" },
+    { certificate: "Agile Scrum Foundation", institution: "Exin" },
     { certificate: "CFA level 1", institution: "CFA Institute" },
     { certificate: "FRM", institution: "GARP" }
 ];
@@ -36,7 +36,7 @@ const workExperience = [
 ];
 
 const education_english = [
-    { degree: "Bachelor Psychology (parttime)", school: "Open University", date: "2020 - 2024" },
+    { degree: "Bachelor Psychology (parttime)", school: "Open University", date: "2020 - now" },
     { degree: "Master Physics and Science Based Business", school: "Leiden University", date: "2012 - 2014" },
     { degree: "Bachelor Physics", school: "Leiden University", date: "2009 - 2012" },
     { degree: "Bachelor Astronomy", school: "Leiden University", date: "2009 - 2012" },
@@ -45,7 +45,7 @@ const education_english = [
 ];
 
 const education = [
-    { degree: "Bachelor Psychologie (parttime)", school: "Open Universiteit", date: "2020 - 2024" },
+    { degree: "Bachelor Psychologie (parttime)", school: "Open Universiteit", date: "2020 - heden" },
     { degree: "Master Physics and Science Based Business", school: "Universiteit Leiden", date: "2012 - 2014" },
     { degree: "Bachelor Natuurkunde", school: "Universiteit Leiden", date: "2009 - 2012" },
     { degree: "Bachelor Sterrenkunde", school: "Universiteit Leiden", date: "2009 - 2012" },
